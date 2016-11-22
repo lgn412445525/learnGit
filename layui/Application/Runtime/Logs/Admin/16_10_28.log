@@ -1,0 +1,648 @@
+[ 2016-10-28T09:15:40+08:00 ] ::1 /layui/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0532s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: user D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0261s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='' and g.status='1' )  [ RunTime:0.0410s ]
+NOTIC: [8] Undefined index: user D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 45 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.165867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.166007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000241s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000570s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075381s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001166s ]
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/css/font-awesome.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/css/font-awesome-ie7.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/css/ace.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/css/ace-rtl.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/css/ace-skins.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/css/ace-ie.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__PUBLIC_CSS__/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001897s ]
+ERR: 非法操作:__PUBLIC_CSS__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/css/font-awesome.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/css/font-awesome-ie7.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/js/ace-extra.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/js/html5shiv.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__ADMIN_ACEADMIN__/js/respond.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+ERR: 非法操作:__ADMIN_ACEADMIN__
+
+[ 2016-10-28T09:15:52+08:00 ] ::1 /layui/admin/user/__PUBLIC_CSS__/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+ERR: 非法操作:__PUBLIC_CSS__
+
+[ 2016-10-28T09:15:58+08:00 ] ::1 /layui/Admin/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `study_users` [ RunTime:0.0302s ]
+SQL: SELECT * FROM `study_users` WHERE `username` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined variable: error D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2e4d6b78a25f5898a8b2dee6571289ba.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000494s ]
+
+[ 2016-10-28T09:15:59+08:00 ] ::1 /layui/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.1040s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0224s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000681s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000968s ]
+
+[ 2016-10-28T09:16:01+08:00 ] ::1 /layui/Admin/Nav/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002128s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002264s ]
+
+[ 2016-10-28T09:16:02+08:00 ] ::1 /layui/Admin/Category/catLis
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::_before_update() should be compatible with Think\Model::_before_update(&$data, $options) D:\wamp64\www\layui\Application\Common\Model\CategoryModel.class.php 第 144 行.
+SQL: SHOW COLUMNS FROM `study_category` [ RunTime:0.0662s ]
+SQL: SELECT * FROM `study_category` ORDER BY `sort_num`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001211s ]
+
+[ 2016-10-28T09:16:03+08:00 ] ::1 /layui/Admin/Nav/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2016-10-28T09:16:03+08:00 ] ::1 /layui/Admin/Category/catLis
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::_before_update() should be compatible with Think\Model::_before_update(&$data, $options) D:\wamp64\www\layui\Application\Common\Model\CategoryModel.class.php 第 144 行.
+SQL: SHOW COLUMNS FROM `study_category` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `study_category` ORDER BY `sort_num`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+NOTIC: [8] Use of undefined constant Self - assumed 'Self' D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2657881e7b4c60d4bd31896cbd54a3dd.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000952s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001140s ]
+
+[ 2016-10-28T09:16:13+08:00 ] ::1 /layui/Admin/Active/lis/cid/39
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0011s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0013s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `study_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `study_category` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_active` [ RunTime:0.1139s ]
+NOTIC: [2048] Only variables should be passed by reference D:\wamp64\www\layui\Application\Admin\Controller\AdminBaseController.class.php 第 12 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `study_active` WHERE `cate_id` = 39 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: data D:\wamp64\www\layui\Application\Admin\Controller\ActiveController.class.php 第 114 行.
+SQL: SELECT * FROM `study_category` WHERE `model_name` = 'Active'  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000329s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.119567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.119779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001237s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001414s ]
+
+[ 2016-10-28T09:16:23+08:00 ] ::1 /layui/Admin/About/lis/cid/33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_about` [ RunTime:0.0459s ]
+SQL: SHOW COLUMNS FROM `study_category` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `study_category` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `study_about` WHERE `cid` = 33 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+NOTIC: [8] Undefined variable: vo D:\wamp64\www\layui\Application\Runtime\Cache\Admin\b483a1e8cd46c82a0d46986867ffe11c.php 第 79 行.
+NOTIC: [8] Undefined variable: vo D:\wamp64\www\layui\Application\Runtime\Cache\Admin\b483a1e8cd46c82a0d46986867ffe11c.php 第 85 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2016-10-28T09:16:30+08:00 ] ::1 /layui/Admin/Category/ajax_content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `study_category` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `study_category` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-10-28T09:16:35+08:00 ] ::1 /layui/Admin/Nav/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051058s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001164s ]
+
+[ 2016-10-28T09:16:41+08:00 ] ::1 /layui/Admin/Nav/order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: UPDATE `study_admin_nav` SET `order_number`='1' WHERE `id` = 1 [ RunTime:0.0002s ]
+SQL: UPDATE `study_admin_nav` SET `order_number`=NULL WHERE `id` = 2 [ RunTime:0.0002s ]
+SQL: UPDATE `study_admin_nav` SET `order_number`=NULL WHERE `id` = 39 [ RunTime:0.0002s ]
+SQL: UPDATE `study_admin_nav` SET `order_number`='2' WHERE `id` = 4 [ RunTime:0.0003s ]
+SQL: UPDATE `study_admin_nav` SET `order_number`='1' WHERE `id` = 7 [ RunTime:0.0003s ]
+SQL: UPDATE `study_admin_nav` SET `order_number`='2' WHERE `id` = 8 [ RunTime:0.0003s ]
+SQL: UPDATE `study_admin_nav` SET `order_number`='3' WHERE `id` = 9 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Undefined variable: error D:\wamp64\www\layui\Application\Runtime\Cache\Admin\2e4d6b78a25f5898a8b2dee6571289ba.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2016-10-28T09:16:42+08:00 ] ::1 /layui/Admin/Nav/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001405s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') D:\wamp64\www\layui\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `study_admin_nav` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `study_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM study_auth_group_access a INNER JOIN study_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `study_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `study_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','126','127','128','129','131','21','7','8','9','10','11','12','13','14','15','16','123','124','125','19','130') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `study_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001288s ]
+

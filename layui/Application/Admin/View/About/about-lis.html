@@ -1,0 +1,53 @@
+<include file="Public/header"/>
+
+<div class="admin-content">
+    <div class="admin-content-body">
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">{$cat.cate_name}</strong> </div>
+        </div>
+        <hr>
+
+        <div class="am-g">
+            <form role="form" id="form" action="{:U('About/lis',array('id'=>$cat['id']))}" method="post"
+                  enctype="multipart/form-data">
+                <fieldset>
+                <input type="hidden" name="id" value="{$vo.id}">
+                <input type="hidden" name="cid" value="{$cat.id}"/>
+                <input type="hidden" name="cate_name" value="{$cat.cate_name}">
+                <div class="am-form-group">
+                    <label for="doc-ta-1" style="margin-left:1%;">内容:</label>
+                    <textarea name="content" id="doc-ta-1" cols="50" rows="5" style="width:80%;height:800px;">
+                           {:html_entity_decode($vo['content'])}
+                    </textarea>
+                    <!--引入kindeditor编辑器-->
+                    <script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor.js"></script>
+                    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+                    <script type="text/javascript">
+                        var editor;
+                        KindEditor.ready(function(K) {
+                            editor = K.create('textarea[name="content"]', {
+                                allowFileManager : true,
+                                afterBlur : function(){
+                                    //编辑器失去焦点时直接同步，可以取到值
+                                    this.sync();
+                                }
+                            });
+                        });
+                    </script>
+                    <!--引入kindeditor编辑器-->
+                    <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                </div>
+                <p><button type="submit" class="am-btn am-btn-default">提交</button></p>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<footer class="admin-content-footer">
+    <hr>
+    <p class="am-padding-left">© 2016 AllMobilize, Inc. Licensed under QMTC license.</p>
+</footer>
+<include file="Public/footer"/>

@@ -1,0 +1,94 @@
+<include file="Public/header" />
+<!--多图上传插件-->
+<script type="text/javascript" src="__PUBLIC__/dtupload/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/dtupload/js/swfupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/dtupload/js/handlers1.js"></script>
+<link href="__PUBLIC__/dtupload/css/default.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="__PUBLIC__/Home/zdy/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/zdy/Validform.js"></script>
+<script src="__PUBLIC__/laydate/laydate.js"></script>
+
+<div class="wrapper wrapper-content  animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="ibox ">
+                <div class="ibox-content">
+                    <script>
+                        function fnClickAddRow() {
+                            var url="{:U('Banner/lis')}";
+                            location.reload();
+                            location.href=url;
+                        }
+                        $(function(){
+                        })
+                    </script>
+                    <div class="">
+                        <a onclick="fnClickAddRow();" href="javascript:void(0)" class="btn btn-primary ">内容列表</a>
+                    </div>
+
+                    <div style="height:30px;"></div>
+
+                    <form role="form" id="form" action="{:U('Banner/sc')}" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label>banner类型</label>
+                            <select name="signal" datatype="*">
+                                <option value="">--请选择--</option>
+                                <option value="1">首页</option>
+                                <option value="2">标准化建设</option>
+                                <option value="3">信用评价</option>
+                                <option value="4">行业研究</option>
+                                <option value="5">中部banner</option>
+                            </select>
+                            <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>图集上传</label>
+                            <webuploader name="banner" url="{:U('Admin/Banner/ajax_upload')}"
+                                         word="或将照片拖到这里，单次最多可选300张" />
+                            <webuploaderjs />
+                        </div>
+
+						<div class="form-group">
+                            <label>图集每一张图片对应的名字</label>
+                            <textarea  name="url_name" rows="5" cols="50"
+                                   nullmsg="请输入每一张图片的名称，有就填写，没有就不填" placeholder="请输入图片名称"
+                                   class="form-control">{$vo.url_name}</textarea>
+                            <font color="red">多个,隔开</font>
+                            <div class="error" style="position:relative;left:365px;top:-25px"></div>
+                        </div>
+						<div class="form-group">
+                            <label>图集每一张图片对应的路径</label>
+                            <textarea  name="link_url" rows="5" cols="50"
+                                   nullmsg="请输入图片路径" placeholder="请输入每一张图片的路径，有就填写，没有就不填"
+                                   class="form-control"></textarea>
+                            <font color="red">多个,隔开</font>
+                            <div class="error" style="position:relative;left:365px;top:-25px"></div>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-primary m-t-n-xs" type="submit"><strong>提交</strong>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script>
+                $("#form").Validform({
+                    tiptype:function(msg,o,cssctl) {
+                        if (!o.obj.is("form")) {
+                            var objtip = o.obj.siblings('div.error');
+                            cssctl(objtip, o.type);
+                            objtip.text(msg);
+                        }
+                    }
+                })
+            </script>
+
+
+        </div>
+    </div>
+
+</div>
+<include file="Public/footer"/>

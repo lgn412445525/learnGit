@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>栏目管理</title>
+    <script src="__PUBLIC__/Admin/js/jquery-2.1.1.min.js"></script>
+    <!--<link href="__ADMIN_ACEADMIN__/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="__ADMIN_ACEADMIN__/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/statics/font-awesome-4.4.0/css/font-awesome.min.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="__ADMIN_ACEADMIN__/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="__ADMIN_ACEADMIN__/css/ace.min.css" />
+    <link rel="stylesheet" href="__ADMIN_ACEADMIN__/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="__ADMIN_ACEADMIN__/css/ace-skins.min.css" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="__ADMIN_ACEADMIN__/css/ace-ie.min.css" />
+    <![endif]-->
+    <script src="__ADMIN_ACEADMIN__/js/ace-extra.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="__ADMIN_ACEADMIN__/js/html5shiv.js"></script>
+    <script src="__ADMIN_ACEADMIN__/js/respond.min.js"></script>
+    <![endif]-->
+    <bootstrapcss />
+</head>
+<body>
+
+<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            首页
+        </li>
+        <li class="active">栏目管理</li>
+    </ul><!-- /.breadcrumb -->
+</div>
+<ul id="myTab" class="nav nav-tabs">
+    <li class="active">
+        <a href="#home" data-toggle="tab">栏目列表</a>
+    </li>
+    <li>
+        <button class="btn btn-sm btn-info" data-toggle="modal" onclick="add_cate()">
+            添加栏目
+        </button>
+    </li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in active" id="home">
+            <table id="simple-table" class="table  table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th width="5%">排序</th>
+                    <th>栏目名称</th>
+                    <th>模块名称</th>
+                    <th>是否显示</th>
+                    <th>是否导航</th>
+                    <th >操作</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <foreach name="dlist" item="vo" key="k">
+                    <if condition="$vo['model_name'] neq Self" >
+                        <tr class="gradeU" clas="{$vo['level']}"
+                            style="<if condition='$vo.level gt 0'>display:none</if>">
+                            <td class="jz "><input type='text' class='sortn' value="{$vo.sort_num}"
+                                                           pid="{$vo.id}"
+                                                   size='3' />
+                            </td>
+                            <!--<td class="jz">{$vo.id}</td>-->
+                            <td class="col-sm-5" style="cursor:pointer;">
+                                {$vo['level']*2|str_repeat="&nbsp;&nbsp;",###}
+                                <img class='addmore' src="__PUBLIC__/Admin/img/btn_jia.gif"/> <b>&nbsp;{$vo
+                                .cate_name}</b>
+                            </td>
+                            <td class="jz col-sm-1">
+                                <span class="text-info">
+                                    <if condition="$vo.model_name eq 'Active'">列表模块
+                                    <elseif condition="$vo.model_name eq 'About'"/>单编辑模块
+                                        <elseif condition="$vo.model_name eq 'Teacher'"/>老师列表模块
+                                    </if>
+                                </span>
+                            </td>
+
+                            <td class="jz xs col-sm-1"  mid="{$vo.id}">
+                                <if condition="$vo['is_show'] eq 1">
+                                    <img src="__PUBLIC__/Admin/img/true.png" xs="1" /><else/>
+                                    <img src="__PUBLIC__/Admin/img/error.png" xs="0" />
+                                </if>
+                            </td>
+                            <td class="jz dh col-sm-1" mid="{$vo.id}">
+                                <if condition="$vo['is_nav'] eq 1">
+                                    <img src="__PUBLIC__/Admin/img/true.png" xs="1" /><else/>
+                                    <img src="__PUBLIC__/Admin/img/error.png" xs="0" />
+                                </if>
+                            </td>
+
+                            <td class="jz col-sm-4">
+                                <a class="label label-danger" href="{:U($vo['model_url'],array('cid'=>$vo['id']))}">内容管理</a>
+                                &nbsp;
+                                <a class="label label-success" catID="{$vo['id']}" onclick="add_child(this)">添加子类</a>
+                                &nbsp;
+                                <a class="label label-info" onclick="edit_cat(this)" catID="{$vo['id']}">编辑
+                                </a>
+                                &nbsp;
+                                <a class="label label-warning"
+                                   href="{:U('Category/catDelete',array('id'=>$vo['id']))}">删除</a>
+                            </td>
+                        </tr>
+                    </if>
+                </foreach>
+                </tbody>
+
+                <script>
+                    //点击增加
+                    $(function(){
+                        $(".addmore").click(function(){
+                            var img=$(this);
+                            //alert(img.parent().parent().attr('class'));
+                            //return false;
+                            if( img.attr('src')=="__PUBLIC__/Admin/img/btn_jia.gif"){
+                                img.attr('src',"__PUBLIC__/Admin/img/btn_jian.gif");
+                                img.parent().parent().nextAll().each(function(i,val){
+                                    //alert($(val).attr('class'));
+                                    if($(val).attr('clas')==parseInt(img.parent().parent().attr('clas'))+1){
+                                        $(val).show();
+                                    }else{
+                                        if($(val).attr('clas')<=parseInt(img.parent().parent().attr('clas'))){
+                                            return false;
+                                        }
+                                    }
+                                })
+                            }else{
+                                $(this).attr('src',"__PUBLIC__/Admin/img/btn_jia.gif");
+                                img.parent().parent().nextAll().each(function(i,val){
+                                    //alert($(val).attr('class'));
+                                    if($(val).attr('clas')>parseInt(img.parent().parent().attr('clas'))){
+                                        $(val).hide();
+                                        $(val).children('td').find('img.add').attr('src',"__PUBLIC__/Admin/img/btn_jia.gif");
+                                    }else{
+                                        return false;
+                                    }
+                                })
+                            }
+                        })
+                    })
+
+                    //点击改变排序数量
+                    $(function(){
+                        $(".sortn").blur(function(){
+                            var num=$(this).val();
+                            var pid=$(this).attr('pid');
+                            //alert($(this).parent().siblings().length);
+                            //var url=$(this).parent().siblings().find(".urllj").val();
+                            //alert(num);
+                            $.post("{:U('Category/editSortnum')}",{id:pid,num:num},function(e){
+                                $(this).val(e.num);
+                                //$(this).parent().siblings().find(".urllj").val(e.url)
+                            },"json");
+                        })
+                        $(".xs").find('img').click(function() {
+                            if(confirm('你确定要修改吗')){
+                                var url = "{:U('Category/ajaxChange')}";
+                                var val = $(this).attr('xs');
+                                var mid = $(this).parent().attr('mid');
+                                if (val == 1) {
+                                    $.post(url, {xs: val, mid: mid,type:1});
+                                    $(this).attr('src', "__PUBLIC__/Admin/img/error.png");
+                                    $(this).attr('xs', '0');
+
+                                } else {
+                                    $.post(url, {xs: val, mid: mid,type:1});
+                                    $(this).attr('src', "__PUBLIC__/Admin/img/true.png");
+                                    $(this).attr('xs', '1');
+                                }
+                            }else{
+                                return false;
+                            }
+                        })
+                        $(".dh").find('img').click(function() {
+                            if(confirm('你确定要修改吗')){
+                                var url = "{:U('Category/ajaxChange')}";
+                                var val = $(this).attr('xs');
+                                var mid = $(this).parent().attr('mid');
+                                //alert(mid);
+                                if (val == 1) {
+                                    $.post(url, {xs: val, mid: mid,type:2});
+                                    $(this).attr('src', "__PUBLIC__/Admin/img/error.png");
+                                    $(this).attr('xs', '0');
+                                } else {
+                                    $.post(url, {xs: val, mid: mid,type:2});
+                                    $(this).attr('src', "__PUBLIC__/Admin/img/true.png");
+                                    $(this).attr('xs', '1');
+                                }
+                            }else{
+                                return false;
+                            }
+                        })
+                    })
+                    //点击是否显示
+
+                    $(function(){
+                        $('.add').click(function(){
+                            var img=$(this);
+                            //alert(img.parent().parent().attr('class'));
+                            //return false;
+                            if( img.attr('src')=="__PUBLIC__/Admin/img/btn_jia.gif"){
+                                img.attr('src',"__PUBLIC__/Admin/img/btn_jian.gif");
+                                img.parent().parent().nextAll().each(function(i,val){
+                                    //alert($(val).attr('class'));
+                                    if($(val).attr('clas')==parseInt(img.parent().parent().attr('clas'))+1){
+                                        $(val).show();
+                                    }else{
+                                        if($(val).attr('clas')<=parseInt(img.parent().parent().attr('clas'))){
+                                            return false;
+                                        }
+                                    }
+                                })
+                            }else{
+                                $(this).attr('src',"__PUBLIC__/Admin/img/btn_jia.gif");
+                                img.parent().parent().nextAll().each(function(i,val){
+                                    //alert($(val).attr('class'));
+                                    if($(val).attr('clas')>parseInt(img.parent().parent().attr('clas'))){
+                                        $(val).hide();
+                                        $(val).children('td').find('img.add').attr('src',"__PUBLIC__/Admin/img/btn_jia.gif");
+                                    }else{
+                                        return false;
+                                    }
+                                })
+                            }
+                        })
+                    })
+                </script>
+
+                <tr>
+                    <th>
+                        <a href="{:U('Category/catLis')}" class="btn btn-success btn-sm" type="submit">排序</a>
+                    </th>
+                </tr>
+
+            </table>
+        </div>
+</div>
+
+<!-- 修改菜单模态框开始 -->
+<div class="modal fade" id="cat-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    修改菜单
+                </h4>
+            </div>
+            <div class="modal-body">
+
+                <form role="form" id="form" action="{:U('Category/catAdd')}" method="post"
+                      enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label>栏目名称</label>
+                        <input type="text" name="cate_name" datatype="*1-20"
+                               nullmsg="请输入栏目名称" errormsg="长度不能超过20"
+                               placeholder="请输入栏目名称" class="form-control">
+                        <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                    </div>
+                    <input type="hidden" name='id'>
+                    <input type="hidden" name='pid'>
+                    <div class="form-group">
+                        <label>内容模块</label>
+                        <select id="model_name" name="model_name" datatype="*" about="">
+                            <option value="">--请选择--</option>
+                            <option value="Active">文章模块</option>
+                            <option value="About">单编辑页模块</option>
+                        </select>
+                        <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>是否显示</label>
+                        <input type="radio" name="is_show" value="1" show="1" datatype="*" nullmsg="请选择">是
+                        <input type="radio" name="is_show"  show="0" value="0">否
+                        <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>是否导航</label>
+                        <input type="radio" id="is_nav" name="is_nav" nav="1" value="1" datatype="*" nullmsg="请选择">是
+                        <input type="radio" name="is_nav"  nav="0" value="0">否
+                        <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>栏目排序</label>
+                        <input type="text" name="sort_num"
+                               datatype="n"
+                               nullmsg="请输入排序数字"
+                               placeholder="请输入排序数字" class="form-control">
+                        <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-sm btn-primary m-t-n-xs" type="submit"><strong>提交</strong>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 修改菜单模态框结束 -->
+
+<script>
+
+    function add_cate(){
+        $("input[name='id']").val('');
+        $("input[name='pid']").val('0');
+        $("input[name='cate_name']").val('');
+        $("input[name='sort_num']").val('');
+        $("#model_name").val('');
+        $("input[name='is_show']").prop('checked',false);
+        $("input[name='is_nav']").prop('checked',false);
+        $('#cat-edit').modal('show');
+    }
+
+    // 添加子栏目
+    function add_child(obj){
+        var catId=$(obj).attr('catId');
+        $("input[name='id']").val('');
+        $("input[name='pid']").val(catId);
+        $("input[name='cate_name']").val('');
+        $("input[name='sort_num']").val('');
+        $("#model_name").val('');
+        $("input[name='is_show']").prop('checked',false);
+        $("input[name='is_nav']").prop('checked',false);
+        $('#cat-edit').modal('show');
+    }
+
+    //编辑栏目
+    function edit_cat(obj){
+        var Aid = $(obj).attr('catID');
+        $.ajax({
+            type:'post',
+            url:"{:U('Admin/Category/ajax_content')}",
+            data:'Aid='+Aid,
+            dataType:'json',
+            success:function(json){
+
+                $("input[name='id']").val(json.id);
+                $("input[name='cate_name']").val(json.cate_name);
+                $("input[name='sort_num']").val(json.sort_num);
+                $("input[show="+json.is_show+"]").prop('checked',true);
+                $("input[nav="+json.is_nav+"]").prop('checked',true);
+                $("#model_name").val(json.model_name);
+                $("input[name='pid']").val(json.pid);
+
+            }
+        });
+
+        $('#cat-edit').modal('show');
+    }
+
+</script>
+
+<bootstrapjs />
+
+
+
+
+</body>
+</html>

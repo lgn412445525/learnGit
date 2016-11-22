@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <script src="__PUBLIC__/Admin/js/jquery-2.1.1.min.js"></script>
+    <layer />
+</head>
+<body>
+
+<button id="test2">ceshi</button>
+
+<script>
+
+    $('#test2').on('click', function(){
+        layer.open({
+            type: 1,
+            area: ['600px', '360px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "<div style='padding:20px;'>自定义内容</div>" +
+            "<form role="form" id="form" action="{:U('Category/catAdd')}" method="post"
+        enctype="multipart/form-data">
+
+                <div class="form-group">
+                <label>栏目名称</label>
+                <input type="text" name="cate_name" datatype="*1-20"
+        nullmsg="请输入栏目名称" errormsg="长度不能超过20"
+        placeholder="请输入栏目名称" class="form-control">
+                <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                </div>
+
+                <input type="hidden" name='pid'>
+
+                <div class="form-group">
+                <label>内容模块</label>
+                <select name="model_name" datatype="*" about="">
+                <option value="">--请选择--</option>
+                <!--<option value="Article" >资讯模块</option>-->
+                <!--<option value="Recruit" >招聘模块</option>-->
+                <!--<option value="Book" >书刊模块</option>-->
+                <option value="Active" >列表模块</option>
+                <option value="About" >单编辑模块</option>
+                <option value="Teacher" >老师列表模块</option>
+                <!--<option value="Self" >独立模块</option>-->
+                <!--<option value="List" >名录模块</option>-->
+                </select>
+                <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                </div>
+
+
+                <div class="form-group">
+                <label>是否显示</label>
+                <input type="radio" name="is_show" value="1" datatype="*" nullmsg="请选择">是
+                <input type="radio" name="is_show"   value="0">否
+                <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                </div>
+
+                <div class="form-group">
+                <label>是否导航</label>
+                <input type="radio" name="is_nav" value="1" datatype="*" nullmsg="请选择">是
+                <input type="radio" name="is_nav"   value="0">否
+                <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                </div>
+
+                <div class="form-group">
+                <label>栏目排序</label>
+                <input type="text" name="sort_num"
+        datatype="n"
+        nullmsg="请输入排序数字"
+        placeholder="请输入排序数字" class="form-control">
+                <div class="error" style="position:relative;left:485px;top:-25px"></div>
+                </div>
+
+                <div>
+                <button class="btn btn-sm btn-primary m-t-n-xs" type="submit"><strong>提交</strong>
+                </button>
+                </div>
+
+                </form>"
+        });
+    });
+
+</script>
+
+</body>
+</html>

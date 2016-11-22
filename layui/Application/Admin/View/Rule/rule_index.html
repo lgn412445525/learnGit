@@ -1,0 +1,187 @@
+<include file="Public/header"/>
+
+<div class="admin-content">
+    <div class="admin-content-body">
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">权限管理</strong> </div>
+        </div>
+        <br>
+        <div class="am-g">
+            <div class="am-u-sm-12 am-u-md-6" >
+                <div class="am-btn-toolbar">
+                    <div class="am-btn-group am-btn-group-xs">
+                        <a type="button" id="add" class="am-btn am-btn-default" data-am-modal="{target: '#nav-modal', closeViaDimmer: 0, width: 450, height: 270}">
+                            <span class="am-icon-plus"></span> 新增
+                        </a>
+                        <button type="submit" class="am-btn am-btn-default"><span class="am-icon-save"></span> 排序</button>
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-sm-12" >
+                <table id="nav-table" class="am-table am-table-striped am-table-hover table-main">
+                    <thead>
+                    <tr>
+                        <th width="25%">权限名</th>
+                        <th width="40%">权限</th>
+                        <th width="35%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="rule" item="v">
+                        <tr>
+                            <td><b>{$v['_name']}</b></td>
+                            <td><b>{$v['name']}</b></td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <a class="am-btn am-btn-default am-btn-xs am-text-secondary son" navid="{$v['id']}" data-am-modal="{target: '#nav-modal', closeViaDimmer: 0, width: 450, height: 280}">
+                                            <span class="am-icon-pencil-square-o" ></span> 添加子菜单
+                                        </a>
+                                        <a class="am-btn am-btn-default am-btn-xs am-hide-sm-only edit" navid="{$v['id']}" data-am-modal="{target: '#nav-modal', closeViaDimmer: 0, width: 450, height: 280}">
+                                            <span class="am-icon-copy" ></span> 编辑
+                                        </a>
+                                        <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only del" href="javascript:if(confirm('确定删除？'))location='{:U('Admin/Rule/delete',array('id'=>$v['id']))}'">
+                                            <span class="am-icon-trash-o"></span> 删除
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </foreach>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--添加编辑菜单-->
+        <div class="am-modal am-modal-no-btn" tabindex="-1" id="nav-modal">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd" style="margin-bottom:10px;">
+                    <strong class="am-text-primary am-text-lg">添加-编辑菜单</strong>
+                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                </div>
+                <div class="am-modal-bd">
+                    <form class="am-form am-form-horizontal" id="form-with-tooltip" action="{:U('Admin/Nav/add')}" method="post" >
+                        <fieldset>
+                            <div class="am-form-group">
+                                <label for="nav-name" class="am-u-sm-3 am-form-label">权限名:</label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" id="nav-name" name="name" placeholder="输入菜单名" minlength="1" required/>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="pid" value="0">
+                            <input type="hidden" name="id">
+                            <div class="am-form-group">
+                                <label for="nav-link" class="am-u-sm-3 am-form-label">权限:</label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" id="nav-link" name="mca" placeholder="输入连接" required/>
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <div class="am-u-sm-12">
+                                    <button type="submit" class="am-btn am-btn-primary">保存</button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="admin-content-footer">
+    <hr>
+    <p class="am-padding-left">© 2016 AllMobilize, Inc. Licensed under MIT license.</p>
+</footer>
+<include file="Public/footer"/>
+
+<script>
+
+    $("#add").click(function(){
+        $('#nav-name,#nav-ico,#nav-link').val('');
+        $("input[name='pid']").val(0);
+    });
+
+    $(".son").click(function(){
+        var pid = $(this).attr('navId');
+        $('#nav-name,#nav-ico,#nav-link').val('');
+        $("input[name='pid']").val(pid);
+    });
+
+    $(".edit").click(function(){
+        var id = $(this).attr('navid');
+        $.ajax({
+            type:'post',
+            url:"{:U('Admin/Nav/ajax_edit')}",
+            data:'id='+id,
+            dataType:'json',
+            success:function(json){
+                $("input[name='id']").val(json.id);
+                $("#nav-name").val(json.name);
+                $("#nav-ico").val(json.ico);
+                $("#nav-link").val(json.mca);
+                $("input[name='pid']").val(json.pid);
+            }
+        });
+    });
+
+    $(function() {
+        var $form = $('#form-with-tooltip');
+        var $tooltip = $('<div id="vld-tooltip">提示信息！</div>');
+        $tooltip.appendTo(document.body);
+
+        $form.validator();
+
+        var validator = $form.data('amui.validator');
+
+        $form.on('focusin focusout', '.am-form-error input', function(e) {
+            if (e.type === 'focusin') {
+                var $this = $(this);
+                var offset = $this.offset();
+                var msg = $this.data('foolishMsg') || validator.getValidationMessage($this.data('validity'));
+
+                $tooltip.text(msg).show().css({
+                    left: offset.left + 10,
+                    top: offset.top + $(this).outerHeight() + 10
+                });
+            } else {
+                $tooltip.hide();
+            }
+        });
+    });
+
+
+
+</script>
+
+<style>
+    #vld-tooltip {
+        position: absolute;
+        z-index: 1000;
+        padding: 5px 10px;
+        background: #F37B1D;
+        min-width: 150px;
+        color: #fff;
+        transition: all 0.15s;
+        box-shadow: 0 0 5px rgba(0,0,0,.15);
+        display: none;
+    }
+
+    #vld-tooltip:before {
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -8px;
+        content: "";
+        border-width: 0 8px 8px;
+        border-color: transparent transparent #F37B1D;
+        border-style: none inset solid;
+    }
+</style>
